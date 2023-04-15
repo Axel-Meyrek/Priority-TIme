@@ -15,7 +15,7 @@ const interfazNewTarea = () => {
     resetInputs()
 }
 const esconderNewTarea = e => {
-    if(e.target.classList.contains('pantallaBlanca')){
+    if (e.target.classList.contains('pantallaBlanca')) {
         pantallaBlanca_NewTarea.classList.add('pantallaBlanca--off')
         rotarBtnNewTarea()
         resetInputs()
@@ -30,14 +30,15 @@ const activarSuperTarea = () => {
 
 }
 
-const crearTarea = e =>{
+const crearTarea = e => {
     e.preventDefault()
 
     /* Verificar que le coloque un nombre a su tarea */
-    if(inputNameTarea.value == ''){
+    if (inputNameTarea.value == '') {
+        inputNameTarea.classList.add('errorInput')
         return
     }
-    
+
 
     /* Extraer datos html */
     const nameTarea = inputNameTarea.value
@@ -55,13 +56,13 @@ const crearTarea = e =>{
     contenedorName.textContent = nameTarea
     contenedorName.classList.add('tarea_name')
 
-    switch(categoriaTarea){
-        case 'trabajo': 
-            contedorIcon.classList.add('fa-solid', 'fa-briefcase', 'tarea_icon' )
+    switch (categoriaTarea) {
+        case 'trabajo':
+            contedorIcon.classList.add('fa-solid', 'fa-briefcase', 'tarea_icon')
             break
         case 'deportes':
-            contedorIcon.classList.add('fa-solid', 'fa-person-snowboarding', 'tarea_icon' )
-            break    
+            contedorIcon.classList.add('fa-solid', 'fa-person-snowboarding', 'tarea_icon')
+            break
         case 'salud':
             contedorIcon.classList.add('fa-solid', 'fa-heart-pulse', 'tarea_icon')
             break
@@ -75,8 +76,8 @@ const crearTarea = e =>{
             contedorIcon.classList.add('fa-solid', 'fa-people-roof', 'tarea_icon')
             break
         case 'compras':
-               contedorIcon.classList.add('fa-solid', 'fa-cart-shopping', 'tarea_icon')
-               break
+            contedorIcon.classList.add('fa-solid', 'fa-cart-shopping', 'tarea_icon')
+            break
         case 'otro':
             contedorIcon.classList.add('fa-solid', 'fa-paper-plane', 'tarea_icon')
             break
@@ -88,7 +89,7 @@ const crearTarea = e =>{
     contenedorTarea.appendChild(contedorIcon)
 
     /* Comprobar si es una Super Tarea */
-    if(superTarea){
+    if (superTarea) {
         contenedorTarea.classList.add('superTarea')
     }
 
@@ -103,8 +104,8 @@ const crearTarea = e =>{
     /* Agregar un evento a las tareas */
     const eliminarTarea = () => {
         contenedorTarea.classList.add('tarea_delete')
-        setTimeout(() => contenedorTarea.remove(), '200' )
-        
+        setTimeout(() => contenedorTarea.remove(), '200')
+
     }
     contenedorTarea.addEventListener('click', eliminarTarea)
 
@@ -115,10 +116,12 @@ const resetInputs = () => {
     inputCategoriaTarea.value = 'selecciona'
     superTareaBtn.classList.remove('form_star--active')
 }
-
+const resetStyleInput = () => {
+    inputNameTarea.classList.remove('errorInput')
+}
 /* Eventos */
 nuevaTareaBtn.addEventListener('click', interfazNewTarea)
 pantallaBlanca_NewTarea.addEventListener('click', esconderNewTarea)
 superTareaBtn.addEventListener('click', activarSuperTarea)
 crearTareaBtn.addEventListener('click', crearTarea)
-/* conteinerTareas.addEventListener('click', eliminarTarea) */
+inputNameTarea.addEventListener('input', resetStyleInput)

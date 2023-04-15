@@ -220,6 +220,9 @@ button{
     padding: 1em 0;
     border-bottom: 1px solid var(--colorTexto);
 }
+.errorInput{
+    border-color: rgb(252, 70, 70);
+}
 .form_input::placeholder{
     color: var(--colorTexto);
 }
