@@ -1,8 +1,8 @@
-/* Importaciones */
+/* Importaciones -------------------------------------------------*/
 /* 100 300 500 */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&display=swap');
 
-/* Variables */
+/* Variables --------------------------------------------------------------*/
 :root{
     /* Colores */
     --colorPrincipal : #08D9D6;
@@ -25,9 +25,13 @@
 
     /* Tamaño de los botones */
     --tamañobuttons: 2.5rem;
+
+    /* Tamaño Textos */
+    --fontTexs: 1rem;
+    --fontTitle: 1.3rem;
 }
 
-/* Normalizacion */
+/* Normalizacion--------------------------------------------------- */
 *{
     margin: 0;
     padding: 0;
@@ -42,7 +46,11 @@ button{
 }
 
 
-/* Header */
+
+
+
+
+/* Header ----------------------------------------------------*/
 .header{
     width: 100%;
     padding: var(--paddingInterfaz);
@@ -55,6 +63,7 @@ button{
     top: 0;
     right: 0;
     left: 0;
+    z-index: 10;
 }
 .button-menu{
     font-size: var(--tamañobuttons);
@@ -63,7 +72,7 @@ button{
 
 
 
-/* Contenedor Tareas */
+/* Contenedor Tareas --------------------------------------------------*/
 .tareas{
     padding: var(--paddingInterfaz);
     display: flex;
@@ -77,9 +86,9 @@ button{
 
 
 
-/* Tarea Item */
+/* Tarea Item -----------------------------------------------------*/
 .tarea{
-    min-width: 150px;;
+    width: 150px;;
     border-radius: 10px;
     box-shadow: var(--shadowButtons);
 
@@ -103,7 +112,7 @@ button{
 
 
 
-/* Opciones */
+/* Opciones -----------------------------------------------------------*/
 .options{
     width: 100%;
     padding: var(--paddingInterfaz);
@@ -117,14 +126,83 @@ button{
     bottom: 0;
     right: 0;
     left: 0;
+    z-index: 10;
 }
 .buttons_item{
     font-size: var(--tamañobuttons);
     color: var(--colorPrincipal);
 }
 
-@media (max-width: 374px) {
-    .tarea{
-        width: 100%;
-    }
+
+
+/* Modal Nueva tarea ---------------------------------------------------*/
+.pantallaBlanca{
+    height: 100vh;
+    width: 100%;
+    background-color: var(--colorTexto);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.modalNewTarea{
+    background-color: var(--colorComponentes);
+    box-shadow: var(--shadowComponentes);
+    padding: 3em 1em;
+    max-width: 350px;
+    border-radius: 20px;
+    width: 500px;
+    
+    
+}
+.modalNewTarea_title{
+    color: var(--colorTexto);
+    font-size: var(--fontTitle);
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form{
+    color: var(--colorTexto);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.form_description{
+    font-weight: var(--fontMedio);
+}
+.form_input{
+    background-color: var(--colorComponentes);
+    color: var(--colorTexto);
+    font-size: var(--fontTexs);
+    font-weight: var(--fontMedio);
+    border: none;
+    padding: 1em 0;
+    border-bottom: 1px solid var(--colorTexto);
+}
+.form_input::placeholder{
+    color: var(--colorTexto);
+}
+.sectionSuperTarea{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.form_star{
+    font-size: 1.5rem;
+}
+
+.form_button{
+    font-size: var(--fontTexs);
+    display: block;
+    width: 100%;
+    text-align: center;
+    color: var(--colorComponentes);
+    background-color: var(--colorTexto);
+    padding: var(--paddingInterfaz);
+    border-radius: 20px;
 }
