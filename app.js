@@ -32,13 +32,17 @@ const activarSuperTarea = () => {
 
 const crearTarea = e =>{
     e.preventDefault()
+
+    /* Verificar que le coloque un nombre a su tarea */
+    if(inputNameTarea.value == ''){
+        return
+    }
     
 
     /* Extraer datos html */
     const nameTarea = inputNameTarea.value
     const categoriaTarea = inputCategoriaTarea.value
     const superTarea = superTareaBtn.classList.contains('form_star--active')
-    console.log(superTarea)
 
     /* Crear Estructura tarea */
     const contenedorTarea = document.createElement('div')
@@ -96,7 +100,13 @@ const crearTarea = e =>{
     rotarBtnNewTarea()
     resetInputs()
 
-
+    /* Agregar un evento a las tareas */
+    const eliminarTarea = () => {
+        contenedorTarea.classList.add('tarea_delete')
+        setTimeout(() => contenedorTarea.remove(), '200' )
+        
+    }
+    contenedorTarea.addEventListener('click', eliminarTarea)
 
 }
 
@@ -105,8 +115,10 @@ const resetInputs = () => {
     inputCategoriaTarea.value = 'selecciona'
     superTareaBtn.classList.remove('form_star--active')
 }
+
 /* Eventos */
 nuevaTareaBtn.addEventListener('click', interfazNewTarea)
 pantallaBlanca_NewTarea.addEventListener('click', esconderNewTarea)
 superTareaBtn.addEventListener('click', activarSuperTarea)
 crearTareaBtn.addEventListener('click', crearTarea)
+/* conteinerTareas.addEventListener('click', eliminarTarea) */

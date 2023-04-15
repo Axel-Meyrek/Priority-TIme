@@ -100,6 +100,7 @@ button{
     padding: 1em;
     color: var(--colorTexto);
     margin: 0 auto;
+    transition: scale .3s;
 
     animation: entrada 2s;
 }
@@ -130,13 +131,9 @@ button{
     color: var(--colorComponentes);
 }
 
-@keyframes salida {
-    0%{
-        transform: translateY(0);
-    }
-    100%{
-        transform: translateY(1000px);
-    }
+.tarea_delete{
+    background-color: rgb(252, 70, 70);
+    scale: 0;
 }
 
 
