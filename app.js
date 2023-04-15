@@ -10,6 +10,7 @@ const interfazNewTarea = () =>{
 const esconderNewTarea = e =>{
     if(e.target.classList.contains('pantallaBlanca')){
         pantallaBlanca_NewTarea.classList.add('pantallaBlanca--off')
+        rotarBtnNewTarea()
     }
 }
 
