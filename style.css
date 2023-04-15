@@ -100,6 +100,23 @@ button{
     padding: 1em;
     color: var(--colorTexto);
     margin: 0 auto;
+
+    animation: entrada 2s;
+}
+
+@keyframes entrada {
+    0%{
+        transform: translateY(-100px);
+    }
+    50%{
+        transform: translateY(50px);
+    }
+    70%{
+        transform: translateY(-30px);
+    }
+    100%{
+        transform: translateY(0);
+    }
 }
 .tarea_name{
     text-align: center;
@@ -113,6 +130,14 @@ button{
     color: var(--colorComponentes);
 }
 
+@keyframes salida {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(1000px);
+    }
+}
 
 
 
