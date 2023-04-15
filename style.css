@@ -108,6 +108,10 @@ button{
 .tarea_icon{
     font-size: 5rem;
 }
+.superTarea{
+    background-color: var(--colorEnfasis);
+    color: var(--colorComponentes);
+}
 
 
 
@@ -204,6 +208,11 @@ button{
 }
 .form_star{
     font-size: 1.5rem;
+    transition: all .3s;
+}
+.form_star--active{
+    transform: rotate(360deg);
+    color: var(--colorEnfasis);
 }
 
 .form_button{

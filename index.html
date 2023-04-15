@@ -23,68 +23,6 @@
         <!-- <p class="tareas-sinTareas tareas-sinTareas-off">Por el momento no tienes tareas pendientes</p> -->
 
         <!-- Tarea de prueba -->
-        
-        <div class="tarea">
-            <p class="tarea_name">Salir a caminar</p>
-            <div class="conteinerImg">
-                <i class="fa-solid fa-briefcase tarea_icon"></i>
-            </div>
-        </div>
-        <div class="tarea">
-            <p class="tarea_name">Salir a caminar</p>
-            <div class="conteinerImg">
-                <i class="fa-solid fa-briefcase tarea_icon"></i>
-            </div>
-        </div>
-        <div class="tarea">
-            <p class="tarea_name">Salir a caminar</p>
-            <div class="conteinerImg">
-                <i class="fa-solid fa-briefcase tarea_icon"></i>
-            </div>
-        </div>
-        <div class="tarea">
-            <p class="tarea_name">Salir a caminar</p>
-            <div class="conteinerImg">
-                <i class="fa-solid fa-briefcase tarea_icon"></i>
-            </div>
-        </div>
-        <div class="tarea">
-            <p class="tarea_name">Salir a caminar</p>
-            <div class="conteinerImg">
-                <i class="fa-solid fa-briefcase tarea_icon"></i>
-            </div>
-        </div>
-        <div class="tarea">
-            <p class="tarea_name">Salir a caminar</p>
-            <div class="conteinerImg">
-                <i class="fa-solid fa-briefcase tarea_icon"></i>
-            </div>
-        </div>
-        <div class="tarea">
-            <p class="tarea_name">Salir a caminar</p>
-            <div class="conteinerImg">
-                <i class="fa-solid fa-briefcase tarea_icon"></i>
-            </div>
-        </div>
-        <div class="tarea">
-            <p class="tarea_name">Salir a caminar</p>
-            <div class="conteinerImg">
-                <i class="fa-solid fa-briefcase tarea_icon"></i>
-            </div>
-        </div>
-        <div class="tarea">
-            <p class="tarea_name">Salir a caminar</p>
-            <div class="conteinerImg">
-                <i class="fa-solid fa-briefcase tarea_icon"></i>
-            </div>
-        </div>
-        <div class="tarea">
-            <p class="tarea_name">Salir a caminar</p>
-            <div class="conteinerImg">
-                <i class="fa-solid fa-briefcase tarea_icon"></i>
-            </div>
-        </div>
-    </section>
 
 
     <!-- Opciones -->
@@ -104,9 +42,9 @@
             <form class="form" action="">
     
     
-                <input class="form_input" type="text" placeholder="Nombre de la tarea">
+                <input id="inputNameTarea" autocomplete="off" class="form_input" type="text" placeholder="Nombre de la tarea">
 
-                <select aria-placeholder="hola" class="form_input" name="" id="">
+                <select class="form_input" name="" id="inputCategoria">
                     <option value="selecciona">Seleccione una categoria</option>
                     <option value="trabajo">Trabajo</option>
                     <option value="deportes">Deportes</option>
@@ -114,16 +52,17 @@
                     <option value="arte">Arte</option>
                     <option value="entretenimiento">Entretenimiento</option>
                     <option value="familia">Familia</option>
+                    <option value="compras">Compras</option>
                     <option value="otro">Otro</option>
     
                 </select>
     
                 <div class="sectionSuperTarea">
-                    <i  class="fa-solid fa-star form_star"></i>
+                    <i id="superTareaBtn" class="fa-solid fa-star form_star"></i>
                     <p class="form_description form_description-star">Marcar como "Super tarea"</p>
                 </div>
     
-                <button class="form_button">Crear Tarea</button>
+                <button id="crearTareaBtn" class="form_button">Crear Tarea</button>
             </form>
         </div>
     </div>
