@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/7b35ff6dce.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaQueries.css">
     <title>Priority Time</title>
 </head>
 <body>
@@ -94,7 +95,38 @@
     </section>
 
 
+    <!-- Modal para crear nueva tarea -->
+    <div class="pantallaBlanca">
+        <div class="modalNewTarea">
+            <p class="modalNewTarea_title">Crear nueva tarea</p>
+    
+    
+            <form class="form" action="">
+    
+    
+                <input class="form_input" type="text" placeholder="Nombre de la tarea">
 
+                <select aria-placeholder="hola" class="form_input" name="" id="">
+                    <option value="selecciona">Seleccione una categoria</option>
+                    <option value="trabajo">Trabajo</option>
+                    <option value="deportes">Deportes</option>
+                    <option value="salud">Salud</option>
+                    <option value="arte">Arte</option>
+                    <option value="entretenimiento">Entretenimiento</option>
+                    <option value="familia">Familia</option>
+                    <option value="otro">Otro</option>
+    
+                </select>
+    
+                <div class="sectionSuperTarea">
+                    <i  class="fa-solid fa-star form_star"></i>
+                    <p class="form_description form_description-star">Marcar como "Super tarea"</p>
+                </div>
+    
+                <button class="form_button">Crear Tarea</button>
+            </form>
+        </div>
+    </div>
 
 
     <script src="app.js"></script>
