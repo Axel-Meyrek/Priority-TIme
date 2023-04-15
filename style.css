@@ -1,0 +1,130 @@
+/* Importaciones */
+/* 100 300 500 */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;300;500&display=swap');
+
+/* Variables */
+:root{
+    /* Colores */
+    --colorPrincipal : #08D9D6;
+    --colorComponentes :#2F3541;
+    --colorTexto: #EAEAEA;
+    --colorTexto: #EAEAEA;
+    --colorEnfasis: #FFDF3A;
+
+    /* Fonst weight */
+    --fontBold: 500;
+    --fontMedio: 300;
+    --fontLigh: 100;
+
+    /* Shadows */
+    --shadowButtons: 0 4px 4px rgba(0, 0, 0, 0.25);
+    --shadowComponentes: 0px 4px 10px 1px rgba(0, 0, 0, 0.25);
+
+    /* Padding */
+    --paddingInterfaz: 1em 2em;
+
+    /* Tamaño de los botones */
+    --tamañobuttons: 2.5rem;
+}
+
+/* Normalizacion */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+button{
+    background: none;
+    border: none;
+}
+
+
+/* Header */
+.header{
+    width: 100%;
+    padding: var(--paddingInterfaz);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--colorComponentes);
+    box-shadow: var(--shadowComponentes);
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+.button-menu{
+    font-size: var(--tamañobuttons);
+    color: var(--colorPrincipal);
+}
+
+
+
+/* Contenedor Tareas */
+.tareas{
+    padding: var(--paddingInterfaz);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 100px 0;
+}
+
+
+
+
+/* Tarea Item */
+.tarea{
+    min-width: 150px;;
+    border-radius: 10px;
+    box-shadow: var(--shadowButtons);
+
+    background-color: var(--colorComponentes);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    color: var(--colorTexto);
+    margin: 0 auto;
+}
+.tarea_name{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.tarea_icon{
+    font-size: 5rem;
+}
+
+
+
+
+/* Opciones */
+.options{
+    width: 100%;
+    padding: var(--paddingInterfaz);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--colorComponentes);
+    box-shadow: var(--shadowComponentes);
+    position: fixed;
+    justify-content: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.buttons_item{
+    font-size: var(--tamañobuttons);
+    color: var(--colorPrincipal);
+}
+
+@media (max-width: 374px) {
+    .tarea{
+        width: 100%;
+    }
+}
