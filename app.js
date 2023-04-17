@@ -57,6 +57,9 @@ const crearTarea = e => {
     contenedorName.classList.add('tarea_name')
 
     switch (categoriaTarea) {
+        case 'escuela':
+            contedorIcon.classList.add('fa-solid', 'fa-graduation-cap', 'tarea_icon')
+            break
         case 'trabajo':
             contedorIcon.classList.add('fa-solid', 'fa-briefcase', 'tarea_icon')
             break
